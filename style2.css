@@ -1,6 +1,3 @@
-@import url(style.css);
-
-
 .background {
     position: fixed;
     width: 100%;
@@ -16,10 +13,142 @@
         display: block;
         width: 20px;
         height: 20px;
-        background: rgba(255, 255, 255, 0.15);
+        background: var(--bolinha);
         border-radius: 50%;
         animation: float 10s linear infinite;
     }
+}
+
+
+
+
+/* ==========================================================
+   CSS CONSOLIDADO (RESPONSIVIDADE LIMPA)
+   ========================================================== */
+
+/* 1. ESTILOS BASE (BOTÕES QUE NÃO PODEM SUMIR) */
+.btn-cv {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--principal);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.close-menu {
+    display: none; /* Oculto no Desktop */
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 40px;
+    color: var(--principal);
+    cursor: pointer;
+}
+
+/* 2. MEDIA QUERIES (ATÉ 768px - MOBILE) */
+@media (max-width: 768px) {
+    
+    /* HEADER & MENU HAMBÚRGUER */
+    .menu-toggle {
+        display: flex !important; /* Força o aparecimento do ícone */
+        margin-right: 15px;
+    }
+
+    .close-menu { display: block; }
+
+    .nav-esquerda {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido */
+        width: 80%;
+        height: 100vh;
+        background: rgba(8, 8, 61, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        gap: 30px;
+        z-index: 1000;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    header.menu-aberto .nav-esquerda { right: 0; }
+
+    .nav-esquerda a {
+        font-size: 22px;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    /* ANIMAÇÃO DO X */
+    header.menu-aberto .menu-toggle span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    header.menu-aberto .menu-toggle span:nth-child(2) { opacity: 0; }
+    header.menu-aberto .menu-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    /* SEÇÃO SOBRE (AJUSTE DE ORDEM) */
+    .sobre {
+        padding: 40px 15px;
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    .sobre .container {
+        display: flex;
+        flex-direction: column; /* Empilha tudo */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .foto_icon {
+        order: 1; /* Foto primeiro */
+        max-width: 200px;
+        height: auto;
+    }
+
+    .foto {
+        border-radius: 50%; /* Circular fica melhor no mobile */
+        border: 4px solid var(--principal);
+    }
+
+    .informacao {
+        order: 2; /* Texto segundo */
+        width: 100%;
+    }
+
+    .informacao h1 { font-size: 1.8rem; }
+    .informacao p { font-size: 0.95rem; line-height: 1.6; }
+
+    .linguas-icon {
+        order: 3; /* Linguagens por último */
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+    }
+
+    .linguas-icon ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .linguas-icon ul img { width: 30px; }
+}
+
+/* 3. PEQUENOS AJUSTES FINAIS */
+@media (max-width: 480px) {
+    .nav-direita { gap: 10px; }
+    .btn-cv { padding: 6px 10px; font-size: 12px; }
+    .scroll-indicator { display: none; }
 }
 
 
