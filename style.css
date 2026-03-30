@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
 
 :root {
     --texto: #ffffff;
@@ -51,7 +54,7 @@ body.tema-claro .lang-btn {
 
 body.tema-claro .lang-menu {
     background: #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 body.tema-claro .lang-menu li {
@@ -93,8 +96,8 @@ header nav {
     width: 40px;
     height: 32px;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.25);
-    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -104,7 +107,7 @@ header nav {
 }
 
 .menu-toggle span {
-    width: 100%;
+    width: 80%;
     height: 2px;
     border-radius: 999px;
     background: #fff;
@@ -135,50 +138,59 @@ header.menu-aberto .menu-toggle span:nth-child(3) {
 }
 
 
-.btn-cv{
+.btn-cv {
 
-background:var(--principal);
-color:#fff;
-padding:6px 14px;
-border-radius:20px;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
+    background: var(--principal);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
 
 }
 
-.btn-cv:hover{
+.btn-cv:hover {
 
-transform:scale(1.05);
-background:#ff7a29;
+    transform: scale(1.05);
+    background: #ff7a29;
 
 }
 
 /* Estilo básico dos links */
-.nav-esquerda  a {
-  text-decoration: none;
-  color: var(--texto);
-  font-family: sans-serif;
-  font-size: 20px;
-  margin: 0 15px;
-  position: relative; /* Importante: o "pai" deve ser relativo */
-  padding: 5px 0;
+.nav-esquerda a {
+    text-decoration: none;
+    color: var(--texto);
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 0 15px;
+    position: relative;
+    /* Importante: o "pai" deve ser relativo */
+    padding: 5px 0;
 }
 
 /* Criando a linha "fantasma" que será a borda */
-.nav-esquerda  a::after {
-  content: ""; /* Necessário para o elemento existir */
-  position: absolute; /* Ele flutua em relação ao link */
-  width: 0%; /* Começa com largura zero (escondido) */
-  height: 4px; /* Grossura da linha */
-  background-color: var(--texto); /* Cor da linha */
-  bottom: 0; /* Cola a linha na parte de baixo */
-  left: 0; /* Alinha à esquerda */
-  transition: 0.25s ease-in-out; /* Faz a animação suave [00:04:47] */
+.nav-esquerda a::after {
+    content: "";
+    /* Necessário para o elemento existir */
+    position: absolute;
+    /* Ele flutua em relação ao link */
+    width: 0%;
+    /* Começa com largura zero (escondido) */
+    height: 4px;
+    /* Grossura da linha */
+    background-color: var(--texto);
+    /* Cor da linha */
+    bottom: 0;
+    /* Cola a linha na parte de baixo */
+    left: 0;
+    /* Alinha à esquerda */
+    transition: 0.25s ease-in-out;
+    /* Faz a animação suave [00:04:47] */
 }
 
-.nav-esquerda  a:hover::after {
-  width: 100%; 
+.nav-esquerda a:hover::after {
+    width: 100%;
 }
 
 .principal {
@@ -193,8 +205,10 @@ background:#ff7a29;
 }
 
 .principal h1 {
+    font-family: "Permanent Marker", cursive;
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .principal p {
@@ -307,10 +321,10 @@ background:#ff7a29;
     max-width: 1280px;
     padding: 110px 60px;
     margin: 110px auto;
-    background: linear-gradient(135deg, rgba(8, 3, 32, 0.9), rgba(34, 16, 84, 0.9));
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 32px;
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 28px 60px rgba(0,0,0,0.55);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(14px);
 }
 
@@ -341,16 +355,16 @@ background:#ff7a29;
     align-items: center;
     padding: 20px 22px 26px;
     border-radius: 26px;
-    background: radial-gradient(circle at top, rgba(251,97,7,0.22), transparent 55%);
-    border: 1px solid rgba(255,255,255,0.16);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .foto {
     width: 100%;
     max-width: 380px;
     border-radius: 24px;
-    border: 3px solid rgba(255,255,255,0.75);
-    box-shadow: 0 26px 60px rgba(0,0,0,0.65);
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65);
     transition: 0.4s;
 }
 
@@ -429,6 +443,7 @@ background:#ff7a29;
 .card-conteudo p {
     font-size: 14px;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .tecnologias span {
@@ -545,6 +560,8 @@ button[type="submit"]:hover {
 
 .form-direita textarea {
     width: 100%;
+    height: 150px;
+    margin-top: 25px;
     padding: 12px;
     border: 2px solid #999;
     border-radius: 6px;
@@ -558,17 +575,17 @@ button[type="submit"]:hover {
     box-shadow: 0 0 8px rgba(251, 97, 7, 0.6);
 }
 
-.campo textarea + label {
+.campo textarea+label {
     position: absolute;
     left: 12px;
-    top: 12px;
+    top: 35px;
     color: #777;
     transition: 0.3s;
     pointer-events: none;
 }
 
-.campo textarea:focus + label,
-.campo textarea:valid + label {
+.campo textarea:focus+label,
+.campo textarea:valid+label {
     top: -14px;
     font-size: 13px;
     color: var(--texto);
@@ -674,4 +691,3 @@ button[type="submit"]:hover {
 .lang-menu li:hover {
     background: #444;
 }
-
