@@ -342,11 +342,15 @@ header.menu-aberto .menu-toggle span:nth-child(3) {
     gap: 88px;
 }
 
-.informacao {
+.sobre .informacao {
     max-width: 640px;
     line-height: 2;
     font-weight: 300;
     font-size: 1.12rem;
+}
+
+.sobre .informacao p {
+    text-align: justify;
 }
 
 .foto_icon {
